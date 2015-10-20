@@ -1,4 +1,28 @@
 var main = function() {
+  var update = function() {
+    var total = 0;
+    var count = 0;
+    $.getJSON("api.json", function(data) {
+      for(user in data) {
+        total += data[user];
+        count++;
+      }
+
+      var average = total / count;
+
+      for(user in data) {
+        $('#' + user).text(data[user].toFixed(2));
+        var diff = (data[user] - average).toFixed(2);
+        if(diff >= 0) {
+          diff = "+" + diff;
+        }
+        $('#' + user).siblings('small').children('.diff').text(diff);
+      }
+
+      $('#totale').text(total.toFixed(2));
+    });
+  };
+
   $('#add').click(function() {
     $('.show-display').hide();
     $('.add-display').show();
@@ -60,33 +84,6 @@ var main = function() {
 
   $('.add-display').hide();
   update();
-  // $('.show-display').hide();
-  // $('.add-display').show();
-
-}
-
-var update = function() {
-  var total = 0;
-  var count = 0;
-  $.getJSON("api.json", function(data) {
-    for(user in data) {
-      total += data[user];
-      count++;
-    }
-
-    var average = total / count;
-
-    for(user in data) {
-      $('#' + user).text(data[user].toFixed(2));
-      var diff = (data[user] - average).toFixed(2);
-      if(diff >= 0) {
-        diff = "+" + diff;
-      }
-      $('#' + user).siblings('small').children('.diff').text(diff);
-    }
-
-    $('#totale').text(total.toFixed(2));
-  });
 }
 
 $(document).ready(main)
