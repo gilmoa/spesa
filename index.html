@@ -15,46 +15,71 @@
         <h1>Spesa</h1>
       </div>
       <div class="panel-body">
-        <ul class="list-group">
+        <ul class="list-group show-display">
           <li class="list-group-item">
-            <h3>
-              <div class="name">
-                Andrea
-              </div>
-              <div class="currency pull-right" id="andrea">
-                <span class="value">123.00</span>
-                <span class="glyphicon glyphicon-euro"></span>
-              </div>
-            </h3>
+            <h4>
+              <div class="name">andrea</div>
+              <small>
+                <div class="diff">+ 12.34</div>
+              </small>
+              <div class="currency pull-right" id="andrea">0.00</div>
+            </h4>
           </li>
           <li class="list-group-item">
-            <h3>
-              <div class="name">
-                Riccardo
-              </div>
-              <div class="currency pull-right" id="riccardo">
-                <span class="value">156.00</span>
-                <span class="glyphicon glyphicon-euro"></span>
-              </div>
-            </h3>
+            <h4>
+              <div class="name">riccardo</div>
+              <small>
+                <div class="diff">+ 12.34</div>
+              </small>
+              <div class="currency pull-right" id="riccardo">0.00</div>
+            </h4>
           </li>
         </ul>
-        <div class="well">
+        <ul class="list-group add-display">
+          <li class="list-group-item">
+            <select name="name" class="form-control">
+              <option value="andrea">Andrea</option>
+              <option value="riccardo" selected="selected">Riccardo</option>
+            </select>
+          </li>
+          <li class="list-group-item">
+            <input type="password" class="form-control password" placeholder="Password">
+          </li>
+          <li class="list-group-item">
+            <div class="input-group">
+              <input type="text" class="form-control add-value" placeholder="0.00">
+              <span class="input-group-addon">€</span>
+            </div>
+          </li>
+        </ul>
+        <div class="well show-display">
           <h3>
-            <div class="name">
-              Totale
-            </div>
-            <div class="currency pull-right" id="totale">
-              <span class="value">999.00</span>
-              <span class="glyphicon glyphicon-euro"></span>
-            </div>
+            <div class="name">Totale</div>
+            <div class="currency pull-right" id="totale">0.00</div>
           </h3>
         </div>
-        <button class="btn btn-success">Add</button>
+        <button class="btn btn-success btn-lg btn-block show-display" id="add">
+          <span class="glyphicon glyphicon-plus"></span> Add
+        </button>
+        <button class="btn btn-success btn-lg btn-block add-display disabled" id ="save">
+          Save
+        </button>
+        <button class="btn btn-danger btn-lg btn-block add-display" id="back">
+          <span class="glyphicon glyphicon-chevron-left"></span>Back
+        </button>
       </div>
       <div class="panel-footer">
-        <p>&copy; quel cane dell'Andrea 2015</p>
+        <p>&copy; quel cane dell' Andrea 2015</p>
       </div>
     </div>
+
+    <div class="shade">
+      <div class="alert alert-success">
+        <h2>Result</h2>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

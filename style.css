@@ -7,10 +7,39 @@
   font-variant: small-caps;
 }
 
-.panel-body .btn {
-  width: 100%;
+.show-display .list-group-item div, .well div {
+  display: inline;
 }
 
-.list-group-item div, .well div {
-  display: inline;
+.name {
+  text-transform: capitalize;
+}
+
+.diff {
+  margin-left: 15px;
+}
+
+.currency::after, .diff::after {
+  content: " €";
+}
+
+.add-display input, .add-display select {
+  padding-right: 15px;
+  text-align: right;
+}
+
+.shade {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  display: none;
+  padding: 40px;
+}
+
+.alert {
+  text-align: center;
 }
