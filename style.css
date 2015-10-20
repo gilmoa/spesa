@@ -1,0 +1,16 @@
+.panel-heading {
+  text-align: center;
+}
+
+.panel-footer {
+  text-align: right;
+  font-variant: small-caps;
+}
+
+.panel-body .btn {
+  width: 100%;
+}
+
+.list-group-item div, .well div {
+  display: inline;
+}
