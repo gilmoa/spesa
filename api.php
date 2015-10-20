@@ -2,10 +2,10 @@
   $user = $_GET['user'];
   $pwd = $_GET['pwd'];
 
-  $pwds = [
+  $pwds = array(
     'andrea' => 'test',
     'riccardo' => 'test2'
-  ];
+  );
 
   if($pwd != $pwds[$user]) {
     echo("Wrong code.");
