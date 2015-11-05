@@ -24,13 +24,13 @@ var main = function() {
   };
 
   $('#add').click(function() {
-    $('.show-display').hide();
-    $('.add-display').show();
+    $('.show-display').slideToggle();
+    $('.add-display').slideToggle();
   });
 
   $('#back').click(function() {
-    $('.add-display').hide();
-    $('.show-display').show();
+    $('.add-display').slideToggle();
+    $('.show-display').slideToggle();
   });
 
   $('#save').click(function() {
