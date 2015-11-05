@@ -43,3 +43,15 @@
 .alert {
   text-align: center;
 }
+
+@media screen and (min-width: 500px) {
+  body {
+    background-color: #eee;
+  }
+
+  .panel {
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
